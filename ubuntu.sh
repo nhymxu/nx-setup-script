@@ -103,11 +103,23 @@ sudo apt-get install postgresql-10 libpq-dev
 sudo -u postgres psql
 postgres=# \password postgres
 
+# MongoDB 
+sudo apt install -y mongodb
+
+# Nginx
+wget https://nginx.org/keys/nginx_signing.key -O - | sudo apt-key add -
+echo "deb [ arch=amd64,arm64 ] deb http://nginx.org/packages/mainline/ubuntu/ bionic nginx
+deb-src [ arch=amd64,arm64 ] http://nginx.org/packages/mainline/ubuntu/ bionic nginx" | sudo tee /etc/apt/sources.list.d/nginx.list
+sudo apt update
+sudo apt install nginx
+
+# PHP
+sudo apt install php-fpm php-cli
+
 # LNAV log parser
 curl -s https://packagecloud.io/install/repositories/tstack/lnav/script.deb.sh | sudo bash
 
-
-
+# Postman
 wget https://dl.pstmn.io/download/latest/linux64 -O postman.tar.gz
 sudo tar -xzf postman.tar.gz -C /opt
 rm postman.tar.gz
