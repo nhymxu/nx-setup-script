@@ -43,9 +43,11 @@ sudo apt-get install -y unace unrar zip unzip p7zip-full p7zip-rar sharutils rar
 # FileZilla - a FTP client
 sudo apt-get install -y filezilla
 
-# Erlang - Actor Concurrency Model based Programming Language
-sudo apt-get install -y erlang
+# Screen capture
+sudo apt install -y flameshot
 
+# Erlang - Actor Concurrency Model based Programming Language
+# sudo apt-get install -y erlang
 
 # Elixir
 wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && sudo dpkg -i erlang-solutions_1.0_all.deb
