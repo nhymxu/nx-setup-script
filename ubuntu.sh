@@ -141,3 +141,16 @@ Terminal=false
 Type=Application
 Categories=Development;
 EOL
+
+# Dnsmasq - Local DNS resolver
+sudo apt install -y dnsmasq
+tee -a /etc/dnsmasq.conf << ENDdm
+# Customize by nhymxu
+interface=lo
+bind-interfaces
+listen-address=127.0.0.1
+conf-dir=/etc/dnsmasq.d/,*.conf
+ENDdm
+
+sudo systemctl restart dnsmasq
+sudo systemctl enable dnsmasq
