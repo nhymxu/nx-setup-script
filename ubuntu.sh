@@ -143,7 +143,8 @@ Categories=Development;
 EOL
 
 # Dnsmasq - Local DNS resolver
-sudo apt install -y dnsmasq
+sudo apt install -y dnsmasq resolvconf
+# sudo dpkg-reconfigure resolvconf
 tee -a /etc/dnsmasq.conf << ENDdm
 # Customize by nhymxu
 interface=lo
@@ -152,6 +153,7 @@ listen-address=127.0.0.1
 conf-dir=/etc/dnsmasq.d/,*.conf
 ENDdm
 
+sudo service network-manager restart
 sudo systemctl restart dnsmasq
 sudo systemctl enable dnsmasq
 
