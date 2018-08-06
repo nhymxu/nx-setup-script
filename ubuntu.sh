@@ -154,3 +154,6 @@ ENDdm
 
 sudo systemctl restart dnsmasq
 sudo systemctl enable dnsmasq
+
+# Net tool
+sudo apt install -y net-tools
