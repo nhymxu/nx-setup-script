@@ -100,8 +100,9 @@ sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 sudo apt update
 sudo apt-get install postgresql-10 libpq-dev
-sudo -u postgres psql
-postgres=# \password postgres
+sudo -u postgres createuser nhymxu
+sudo -u postgres psql -c '\password nhymxu'
+sudo -u postgres psql -c 'ALTER USER nhymxu SUPERUSER CREATEDB;'
 
 # MongoDB 
 sudo apt install -y mongodb
