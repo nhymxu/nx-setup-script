@@ -114,7 +114,7 @@ sudo apt update
 sudo apt install nginx
 
 # PHP
-sudo apt install php-fpm php-cli
+sudo apt install php-fpm php-cli php-mysql
 
 # MariaDB
 sudo apt-get install -y software-properties-common
