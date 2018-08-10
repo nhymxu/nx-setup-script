@@ -33,6 +33,25 @@ killall SystemUIServer
 
 
 #------------------------------------------------------------------
+# Config file
+#------------------------------
+
+# Git config
+cat >> ~/.gitconfig <<EOF
+[user]
+	name = Dung Nguyen
+	email = contact@dungnt.net
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[gc]
+	autoDetach = false
+EOF
+
+
+#------------------------------------------------------------------
 # Software
 #------------------------------
 
