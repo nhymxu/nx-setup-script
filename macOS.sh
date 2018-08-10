@@ -3,6 +3,14 @@
 # Author: Dung Nguyen (nhymxu) <contact@dungnt.net>
 #
 
+#-------------------------------
+# Tweak
+#---------------
+
+# Move Screenshots to folder
+mkdir -p ~/Desktop/Screenshots
+defaults write com.apple.screencapture location ~/Desktop/Screenshots
+
 
 # Homebrew package manage
 xcode-select --install
