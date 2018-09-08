@@ -59,6 +59,9 @@ EOF
 xcode-select --install
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+# Veracrypt - update-to-date version of TrueCrypt
+brew cask install osxfuse
+brew cask install veracrypt
 
 #------------------------------------------------------------------
 # Dev
