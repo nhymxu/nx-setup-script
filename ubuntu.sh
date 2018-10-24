@@ -169,3 +169,6 @@ rm -rf bat_0.6.1_amd64.deb
 ### Updated motd
 sudo apt install -y update-motd
 
+### Config ubuntu dock click-action
+# gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize-or-overview'
+gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize-or-previews'
