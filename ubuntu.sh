@@ -162,9 +162,9 @@ sudo systemctl enable dnsmasq
 sudo apt install -y net-tools
 
 ### Bat - alternative for cat
-wget https://github.com/sharkdp/bat/releases/download/v0.6.1/bat_0.6.1_amd64.deb
-sudo dpkg -i bat_0.6.1_amd64.deb
-rm -rf bat_0.6.1_amd64.deb
+wget https://github.com/sharkdp/bat/releases/download/v0.8.0/bat_0.8.0_amd64.deb
+sudo dpkg -i bat_0.8.0_amd64.deb
+rm -rf bat_0.8.0_amd64.deb
 
 ### Updated motd
 sudo apt install -y update-motd
