@@ -16,7 +16,10 @@ sudo tar xzf git-2.19.1.tar.gz
 cd git-2.19.1
 sudo make prefix=/usr/local/git all
 sudo make prefix=/usr/local/git install
- 
+
+rm -rf git-2.19.1.tar.gz
+rm -rf git-2.19.1
+
 echo "export PATH=$PATH:/usr/local/git/bin" >> /etc/bashrc
 sudo ln -s /usr/local/git/bin/git /usr/bin/git
 source /etc/bashrc
