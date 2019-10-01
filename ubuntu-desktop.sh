@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Dz's Development Machine Setup on Ubuntu
 # Author: Dung Nguyen (nhymxu) <contact@dungnt.net>
 #
