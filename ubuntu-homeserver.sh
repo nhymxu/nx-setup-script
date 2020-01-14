@@ -11,7 +11,8 @@ sudo dpkg-reconfigure locales
 
 # Installing build essentials
 sudo apt install build-essential libssl-dev
-sudo apt install git xclip vim curl fonts-powerline gnupg2 ca-certificates unzip
+sudo apt install git xclip vim curl fonts-powerline gnupg2 ca-certificates unzip 
+sudo apt install apt-transport-https gnupg-agent software-properties-common
 
 ### Python
 sudo apt install python python-dev python-pip python3 python3-dev python3-pip
@@ -44,3 +45,16 @@ sudo apt install mariadb-server
 
 ## Other task
 sudo usermod -aG www-data nginx
+
+## Docker
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+## Executing the Docker Command Without Sudo (Optional)
+sudo usermod -aG docker ${USER}
