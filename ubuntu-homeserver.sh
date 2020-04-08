@@ -45,6 +45,7 @@ sudo apt install mariadb-server
 
 ## Other task
 sudo usermod -aG www-data nginx
+sudo apt install -y sshfs
 
 ## Docker
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
