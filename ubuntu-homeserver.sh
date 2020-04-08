@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Dz's Home Server Setup on Ubuntu 18.04
+# Dz's Home Server Setup on Ubuntu 19.10
 # Author: Dung Nguyen (nhymxu) <contact@dungnt.net>
 #
 
@@ -35,12 +35,12 @@ sudo add-apt-repository ppa:ondrej/php
 
 ## MariaDB
 sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
-echo "deb [arch=amd64,arm64,ppc64el] http://sgp1.mirrors.digitalocean.com/mariadb/repo/10.4/ubuntu bionic main" | sudo tee /etc/apt/sources.list.d/mariadb.list
+echo "deb [arch=amd64] http://sgp1.mirrors.digitalocean.com/mariadb/repo/10.4/ubuntu `lsb_release -cs` main" | sudo tee /etc/apt/sources.list.d/mariadb.list
 
 ## Install 
 sudo apt update
 sudo apt install nginx apache2-utils
-sudo apt install php7.3-fpm php7.3-bcmath php7.3-bz2 php7.3-cli php7.3-curl php7.3-gd php7.3-gmp php7.3-imap php7.3-intl php7.3-json php7.3-mbstring php7.3-mysql php7.3-pgsql php7.3-redis php7.3-sqlite3 php7.3-xml php7.3-zip php7.3-xsl
+sudo apt install php7.4-fpm php7.4-bcmath php7.4-bz2 php7.4-cli php7.4-curl php7.4-gd php7.4-gmp php7.4-imap php7.4-intl php7.4-json php7.4-mbstring php7.4-mysql php7.4-pgsql php7.4-redis php7.4-sqlite3 php7.4-xml php7.4-zip php7.4-xsl
 sudo apt install mariadb-server
 
 ## Other task
