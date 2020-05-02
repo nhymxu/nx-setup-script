@@ -41,7 +41,7 @@ sudo add-apt-repository ppa:ondrej/php
 ## Install PHP
 sudo apt update
 sudo apt install nginx apache2-utils
-sudo apt install php7.4-fpm php7.4-bcmath php7.4-bz2 php7.4-cli php7.4-curl php7.4-gd php7.4-gmp php7.4-imap php7.4-intl php7.4-json php7.4-mbstring php7.4-mysql php7.4-pgsql php7.4-redis php7.4-sqlite3 php7.4-xml php7.4-zip php7.4-xsl
+sudo apt install php7.4-fpm php7.4-bcmath php7.4-bz2 php7.4-cli php7.4-curl php7.4-gd php7.4-gmp php7.4-imap php7.4-intl php7.4-json php7.4-mbstring php7.4-mysql php7.4-pgsql php7.4-redis php7.4-sqlite3 php7.4-tidy php7.4-xml php7.4-zip php7.4-xsl
 
 # Install Nodejs & yn
 curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
