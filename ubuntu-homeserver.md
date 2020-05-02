@@ -111,3 +111,17 @@ To regain control of the console on pressing Enter key, I suggest
 ```shell
 sudo sh -c 'vbetool dpms off; read ans; vbetool dpms on'
 ```
+
+After upgrade to Ubuntu 20.04, run vbetool have error
+
+```
+○ → sudo vbetool dpms off
+mmap /dev/zero: Operation not permitted
+Failed to initialise LRMI (Linux Real-Mode Interface).
+```
+
+To fix this. Change alias to 
+
+```shell
+sudo mount -o remount,exec /dev;sudo vbetool dpms off
+```
