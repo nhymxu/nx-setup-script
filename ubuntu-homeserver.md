@@ -1,4 +1,4 @@
-# Setup Homeserver with Ubuntu 18.04 on Acer laptop
+# Setup Homeserver with Ubuntu 20.04 on Acer laptop
 
 ## Precondition
 
@@ -124,4 +124,11 @@ To fix this. Change alias to
 
 ```shell
 sudo mount -o remount,exec /dev;sudo vbetool dpms off
+```
+
+## Allow current user to edit www-data file/folder
+
+```shell
+sudo chown -vR :nhymxu /data/www/
+sudo chmod -vR g+w /var/www/
 ```
