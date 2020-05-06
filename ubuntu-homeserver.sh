@@ -66,3 +66,8 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 ## Executing the Docker Command Without Sudo (Optional)
 sudo usermod -aG docker ${USER}
+
+## Ultilities
+
+### Lazydocker 
+curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
