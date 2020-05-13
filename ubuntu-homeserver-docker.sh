@@ -14,3 +14,6 @@ docker run -d --name clickhouse-analytics-server -p 8123:8123 -p 9000:9000 -p 90
 # PostgreSQL
 
 # MongoDB
+docker run --name mongodb -p 27017:27017 -v /data/database/mongodb:/data/db -d mongo:4-bionic mongod --replSet nx-repl-set
+docker exec -it mongodb mongo
+# Run on mongo shell: rs.initiate()
