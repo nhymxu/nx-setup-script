@@ -17,3 +17,15 @@ docker run -d --name clickhouse-analytics-server -p 8123:8123 -p 9000:9000 -p 90
 docker run --name mongodb -p 27017:27017 -v /data/database/mongodb:/data/db -d mongo:4-bionic mongod --replSet nx-repl-set
 docker exec -it mongodb mongo
 # Run on mongo shell: rs.initiate()
+
+# Bitwarden
+# Gen token using openssl rand -base64 48
+docker run -d --name bitwarden \
+  -e SIGNUPS_ALLOWED=false \
+  -e ADMIN_TOKEN=your_admin_token_here \
+  -e WEBSOCKET_ENABLED=true
+  -v /data/database/bitwardenrs/:/data/ \
+  -p 16000:80 \
+  -p 16001:3012 \
+  bitwardenrs/server:latest
+  
