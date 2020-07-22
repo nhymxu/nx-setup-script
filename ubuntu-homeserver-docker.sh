@@ -23,7 +23,7 @@ docker exec -it mongodb mongo
 docker run -d --name bitwarden \
   -e SIGNUPS_ALLOWED=false \
   -e ADMIN_TOKEN=your_admin_token_here \
-  -e WEBSOCKET_ENABLED=true
+  -e WEBSOCKET_ENABLED=true \
   -v /data/database/bitwardenrs/:/data/ \
   -p 16000:80 \
   -p 16001:3012 \
