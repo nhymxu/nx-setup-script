@@ -27,5 +27,5 @@ docker run -d --name bitwarden \
   -v /data/database/bitwardenrs/:/data/ \
   -p 16000:80 \
   -p 16001:3012 \
-  bitwardenrs/server:latest
+  bitwardenrs/server:testing
   
