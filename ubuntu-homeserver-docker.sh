@@ -45,7 +45,7 @@ docker run --name adguardhome \
   -d adguard/adguardhome
 
 # n8n.io - Workflow Automation Tool
-docker run -it --rm \
+docker run -d \
 	--name n8n \
 	-p 16010:5678 \
 	-e GENERIC_TIMEZONE="Asia/Ho_Chi_Minh" \
