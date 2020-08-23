@@ -43,3 +43,12 @@ docker run --name adguardhome \
   -p 853:853/tcp \
   -p 3000:3000/tcp \
   -d adguard/adguardhome
+
+# n8n.io - Workflow Automation Tool
+docker run -it --rm \
+	--name n8n \
+	-p 16010:5678 \
+	-e GENERIC_TIMEZONE="Asia/Ho_Chi_Minh" \
+	-e TZ="Asia/Ho_Chi_Minh" \
+	-v /data/database/n8n:/root/.n8n \
+	n8nio/n8n
