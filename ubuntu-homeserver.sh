@@ -15,10 +15,15 @@ sudo apt install git xclip vim curl fonts-powerline gnupg2 ca-certificates unzip
 sudo apt install apt-transport-https gnupg-agent software-properties-common
 
 ### Python
-sudo apt install python python-dev python-pip python3 python3-dev python3-pip
+sudo apt install python3 python3-dev python3-pip
+sudo apt install -y python-is-python3 python-dev-is-python3
 sudo pip install virtualenv
 sudo pip install apt-select
 sudo apt install supervisor
+
+# Alias pip as pip3
+sudo ln -s /usr/bin/pip3 /usr/bin/pip
+
 
 ### Temp tracking from sensors
 sudo apt install lm-sensors hddtemp
