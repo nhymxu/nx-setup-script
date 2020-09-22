@@ -22,6 +22,10 @@ docker run --name clickhouse-analytics-server \
   -d yandex/clickhouse-server
 
 # PostgreSQL
+
+## Get default config file ( for run custom config )
+docker run -i --rm postgres:12 cat /usr/share/postgresql/postgresql.conf.sample > /data/config/postgresql.conf
+
 docker run --name postgres12 \
   -e POSTGRES_PASSWORD=mysecretpassword \
 #  -v /data/config/postgresql.conf:/etc/postgresql/postgresql.conf \
