@@ -12,6 +12,12 @@ docker run -d --name clickhouse-analytics-server -p 8123:8123 -p 9000:9000 -p 90
 docker run -d --name clickhouse-analytics-server -p 8123:8123 -p 9000:9000 -p 9009:9009  --ulimit nofile=262144:262144 --volume=/data/database/sclickhouse:/var/lib/clickhouse -v /data/database/clickhouse_config.xml:/etc/clickhouse-server/config.xml yandex/clickhouse-server
 
 # PostgreSQL
+docker run --name postgres12 \
+  -e POSTGRES_PASSWORD=mysecretpassword \
+#  -v /data/config/postgresql.conf:/etc/postgresql/postgresql.conf \
+  -v /data/database/postgres:/var/lib/postgresql/data \
+  -p 5432:5432 \
+  -d postgres:12
 
 # MongoDB
 docker run --name mongodb -p 27017:27017 -v /data/database/mongodb:/data/db -d mongo:4-bionic mongod --replSet nx-repl-set
