@@ -72,6 +72,8 @@ pyenv install 3.8.3
 ```shell
 echo "net.core.somaxconn=65536" >> /etc/sysctl.conf
 
+# Limit size of journald log
+echo SystemMaxUse=500M | sudo tee -a /etc/systemd/journald.conf
 ```
 
 ### Backup & Restore PostgreSQL
