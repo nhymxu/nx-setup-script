@@ -73,6 +73,7 @@ pyenv install 3.8.3
 echo "net.core.somaxconn=65536" >> /etc/sysctl.conf
 
 # Limit size of journald log
+#  Force log rotate: systemctl kill --kill-who=main --signal=SIGUSR2 systemd-journald.service
 echo SystemMaxUse=500M | sudo tee -a /etc/systemd/journald.conf
 ```
 
