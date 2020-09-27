@@ -22,7 +22,7 @@ docker run --name clickhouse-analytics-server \
   -d yandex/clickhouse-server
 
 # PostgreSQL
-
+## Upgrade: https://github.com/tianon/docker-postgres-upgrade
 ## Get default config file ( for run custom config )
 docker run -i --rm postgres:13 cat /usr/share/postgresql/postgresql.conf.sample > /data/config/postgresql.conf
 
