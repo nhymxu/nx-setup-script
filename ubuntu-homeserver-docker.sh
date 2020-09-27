@@ -24,14 +24,14 @@ docker run --name clickhouse-analytics-server \
 # PostgreSQL
 
 ## Get default config file ( for run custom config )
-docker run -i --rm postgres:12 cat /usr/share/postgresql/postgresql.conf.sample > /data/config/postgresql.conf
+docker run -i --rm postgres:13 cat /usr/share/postgresql/postgresql.conf.sample > /data/config/postgresql.conf
 
-docker run --name postgres12 \
+docker run --name postgres13 \
   -e POSTGRES_PASSWORD=mysecretpassword \
 #  -v /data/config/postgresql.conf:/etc/postgresql/postgresql.conf \
   -v /data/database/postgres:/var/lib/postgresql/data \
   -p 5432:5432 \
-  -d postgres:12
+  -d postgres:13
 
 # MongoDB
 docker run --name mongodb \
