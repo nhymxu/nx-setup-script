@@ -86,7 +86,7 @@ docker run \
   -p 2221:22 \
   -e USER_UID=1000 \
   -e USER_GID=1000 \
-  -v /data/data/database/gitea:/data \
+  -v /data/database/gitea:/data \
   -v /etc/timezone:/etc/timezone:ro \
   -v /etc/localtime:/etc/localtime:ro \
   -d gitea/gitea:latest
