@@ -77,3 +77,16 @@ docker run \
   -e TZ="Asia/Ho_Chi_Minh" \
   -v /data/database/n8n:/root/.n8n \
   -d n8nio/n8n
+
+# gitea - self-hosted git service
+# https://docs.gitea.io/en-us/install-with-docker/
+docker run \
+  --name gitea \
+  -p 3000:3000 \
+  -p 2221:22 \
+  -e USER_UID=1000 \
+  -e USER_GID=1000 \
+  -v /data/data/database/gitea:/data \
+  -v /etc/timezone:/etc/timezone:ro \
+  -v /etc/localtime:/etc/localtime:ro \
+  -d gitea/gitea:latest
