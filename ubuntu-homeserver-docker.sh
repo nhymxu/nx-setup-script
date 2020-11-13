@@ -38,7 +38,8 @@ docker run --name mongodb \
   -p 27017:27017 \
   -v /data/database/mongodb:/data/db \
   -d mongo:4-bionic \
-  mongod --replSet nx-repl-set
+  mongod --replSet nx-repl-set --wiredTigerCacheSizeGB 1
+  # --repair if database error
 
 docker exec -it mongodb mongo
 # Run on mongo shell: rs.initiate()
