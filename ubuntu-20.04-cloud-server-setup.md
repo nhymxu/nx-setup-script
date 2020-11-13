@@ -27,6 +27,11 @@ systemctl enable nginx
 systemctl start nginx
 ```
 
+Other extra config for nginx
+- https://github.com/ergin/nginx-cloudflare-real-ip
+- https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker/blob/master/MANUAL-CONFIGURATION.md
+
+
 ### Install PHP 7.4
 ```shell
 add-apt-repository ppa:ondrej/php
