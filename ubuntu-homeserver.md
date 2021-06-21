@@ -47,6 +47,16 @@ You can turn off and turn on wireless interface by below commands:
 
 The interface will be turnd on, and router will assign an IP address to the wireless interface, it can be checked with `ifconfig`. When the machine startup, it will automatically connected to the chosen WiFi access point.
 
+After that, you need disable power save mode. This turns off power saving for the wifi network device `wlp3s0`
+
+```shell
+# sudo su
+iw wlp3s0 set power_save off
+```
+
+SSH is now much more responsive, and ping times are also back down to < 5ms.
+
+
 ## Disable sleep (do nothing) on lid close
 
 ```shell
