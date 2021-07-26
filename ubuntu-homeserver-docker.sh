@@ -91,3 +91,15 @@ docker run \
   -v /etc/timezone:/etc/timezone:ro \
   -v /etc/localtime:/etc/localtime:ro \
   -d gitea/gitea:latest
+
+# pyload - Download Manager
+# https://github.com/pyload/pyload
+docker run \
+  --name pyload \
+  -p 16020:8000 \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ="Asia/Ho_Chi_Minh" \
+  -v /data/config/pyload:/config \
+  -v /data/downloads:/downloads \
+  -d ghcr.io/linuxserver/pyload
