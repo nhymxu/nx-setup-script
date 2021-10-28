@@ -1,4 +1,4 @@
-# Setup Homeserver with Ubuntu 20.04 on Acer laptop
+# Setup Homeserver with Ubuntu 20.04 on laptop
 
 ## Precondition
 
@@ -134,6 +134,36 @@ To fix this. Change alias to
 
 ```shell
 sudo mount -o remount,exec /dev;sudo vbetool dpms off
+```
+
+## Turn off monitor on Asus X540LA
+
+After my Acer laptop die, I change to other laptop: Asus X540LA. This is old laptop from my friend. So, I just using it as my home server.
+But I have big problem: I can't turn off monitor using above method.
+After type `vbetool` command, screen auto turn on after few seconds with error
+```
+[ 2481.841839] vblank wait timed out on crtc 0
+[ 2481.841963] WARNING: CPU: 1 PID: 13369 at drivers/gpu/drm/drm_vblank.c:1101 drm_wait_one_vblank+0x189/0x1b0 [drm]
+...
+[ 2482.050193] [drm:intel_wait_ddi_buf_idle [i915]] *ERROR* Timeout waiting for DDI BUF A idle bit
+```
+
+After long long time research. I found new way to turn off my laptop monitor.
+```shell
+echo 1 | sudo tee /sys/devices/pci0000:00/0000:00:02.0/graphics/fb0/blank
+echo 0 | sudo tee /sys/class/backlight/intel_backlight/brightness
+```
+
+How to find this path? Using command below
+```shell
+find /sys/ -name fb0
+find /sys/ -name backlight
+```
+
+How to enable monitor again?
+```shell
+echo 0 | sudo tee /sys/devices/pci0000:00/0000:00:02.0/graphics/fb0/blank
+cat /sys/class/backlight/intel_backlight/max_brightness | sudo tee /sys/class/backlight/intel_backlight/brightness
 ```
 
 ## Allow current user to edit www-data file/folder
