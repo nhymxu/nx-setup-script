@@ -4,6 +4,12 @@
 # Author: Dung Nguyen (nhymxu) <contact@dungnt.net>
 #
 
+# docker-compose file from everywhere
+# docker-compose -f /tmp/myproject/docker-compose.yml up -d 
+
+# docker-compose up multiple file
+# docker-compose -f a.yml -f b.yml -f c.yml up
+
 # MariaDB
 docker run --name mariadb \
   -p 3306:3306 \
