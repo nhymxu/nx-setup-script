@@ -77,3 +77,12 @@ echo 'address=/test/127.0.0.1' > $(brew --prefix)/etc/dnsmasq.d/test.conf
 
 sudo launchctl stop homebrew.mxcl.dnsmasq
 sudo launchctl start homebrew.mxcl.dnsmasq
+
+#-------------------------------------------------------------------
+# Setup default text editor
+#-------------------------------
+# Sublime Text 4
+defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add '{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.sublimetext.4;}'
+
+# VS Code
+defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add '{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.microsoft.VSCode;}'
