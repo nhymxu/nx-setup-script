@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  timescaledb-ha:
+    container_name: timescaledb
+    image: timescale/timescaledb-ha:pg14-latest
+    ports:
+      - 5433:5432
+    environment:
+      - TIMESCALEDB_TELEMETRY=off
+      - POSTGRES_PASSWORD=123456
+    volumes:
+      - /data/database/timescaledb:/var/lib/postgresql/data
